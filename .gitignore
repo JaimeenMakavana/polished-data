@@ -1,8 +1,9 @@
 data-workspace/
 config/local.yaml
-.env
 .venv/
 venv/
 __pycache__/
 *.pyc
 .DS_Store
+config.bat
+node_modules
