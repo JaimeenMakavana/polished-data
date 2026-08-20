@@ -1,0 +1,30 @@
+# Non-secret defaults for polished-data jobs.
+# Override with a local `config/local.yaml` (gitignored) or environment variables
+# from `.env.example`. None of this is required to run a job.
+
+workspace:
+  root: data-workspace
+  jobs_dir: jobs
+
+acquisition:
+  user_agent: "polished-data/0.1 (+https://github.com/JaimeenMakavana/polished-data)"
+  request_timeout_seconds: 30
+  max_retries: 3
+  rate_limit_rps: 1
+  respect_robots_txt: true
+
+geocoding:
+  provider: photon
+  endpoint: https://photon.komoot.io/api/
+  city_centroid_fallback:
+    Ahmedabad: { latitude: 23.0225, longitude: 72.5714 }
+
+output:
+  formats: [json, csv]
+  write_quality_report: true
+  write_manifest: true
+
+quality:
+  never_fabricate: true
+  provenance_required: true
+  verification_labels: [verified, partially_verified, unverified]

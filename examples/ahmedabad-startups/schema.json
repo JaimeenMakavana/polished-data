@@ -1,0 +1,31 @@
+{
+  "title": "Ahmedabad startups sample schema",
+  "required_for_complete_row": [
+    "company_name",
+    "website",
+    "city",
+    "sector",
+    "latitude",
+    "longitude",
+    "verification_status"
+  ],
+  "fields": {
+    "company_name": { "type": "string" },
+    "website": { "type": ["string", "null"] },
+    "city": { "type": "string", "const": "Ahmedabad" },
+    "sector": { "type": "string" },
+    "latitude": { "type": "number" },
+    "longitude": { "type": "number" },
+    "verification_status": {
+      "type": "string",
+      "enum": ["verified", "partially_verified", "unverified"]
+    },
+    "description": { "type": ["string", "null"] },
+    "funding_stage": { "type": ["string", "null"] },
+    "founding_year": { "type": ["string", "null"] },
+    "source_url": { "type": "string" },
+    "source_name": { "type": "string" },
+    "geocode_status": { "type": "string" }
+  },
+  "omitted_from_sample": ["email", "phone", "founder", "local_paths"]
+}

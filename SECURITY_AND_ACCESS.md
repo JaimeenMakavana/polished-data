@@ -30,6 +30,7 @@ Never commit or expose:
 - private credentials
 
 Use environment variables or the platform's secret-management facilities.
+See `.env.example` and `config/README.md`. Vulnerability reports: `SECURITY.md`.
 
 ## Repository safety
 

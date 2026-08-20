@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/JaimeenMakavana/polished-data/security/advisories/new
+    about: Report privately. Do not file a public issue.
+  - name: How to request a dataset
+    url: https://github.com/JaimeenMakavana/polished-data/blob/master/README.md
+    about: Open the repo in your coding agent and ask in plain English.

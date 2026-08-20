@@ -1,5 +1,8 @@
 # EXAMPLE
 
+A committed, sanitized sample (not a live job dump) is in `examples/ahmedabad-startups/`.
+The narrative below is the general method. For that dataset’s exact prompt, see `examples/ahmedabad-startups/REPRODUCE.md`.
+
 ## User request
 
 "Find 300 Indian manufacturers of industrial X with company name, website, city, phone and email."

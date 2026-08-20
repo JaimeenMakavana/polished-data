@@ -1,0 +1,32 @@
+name: Feature
+description: New instruction, strategy, output format, or example
+title: "[feat] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is hard or missing today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should change, and in which file?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Agent workflow
+        - Config / env
+        - Examples
+        - CI / validation
+        - Docs
+        - Other
+    validations:
+      required: true

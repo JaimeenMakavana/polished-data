@@ -1,0 +1,22 @@
+{
+  "note": "Totals from the original 2026-08-20 local job, not from sample.csv (20 rows).",
+  "job_id": "job_2026_08_20_ahmedabad_startups",
+  "records_total": 870,
+  "records_with_website": 331,
+  "records_meeting_all_required_fields": 331,
+  "verified_count": 171,
+  "partially_verified_count": 699,
+  "target_500_total_met": true,
+  "target_500_with_website_met": false,
+  "primary_public_sources": [
+    "GUSEC incubated startups",
+    "i-Hub Gujarat supported startups",
+    "iCreate portfolio",
+    "public incubator and funding lists"
+  ],
+  "blocked_sources": [
+    "Startup India portal (login required)",
+    "DPIIT/Dataful bulk CSV (login required)",
+    "paywalled directories"
+  ]
+}

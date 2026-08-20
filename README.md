@@ -35,7 +35,9 @@ Each job is a folder under `data-workspace/jobs/`. Open `output/` first.
 
 If something could not be found honestly, you get an explanation — not invented rows.
 
-A finished example: `data-workspace/jobs/job_2026_08_20_ahmedabad_startups/output/`.
+A finished, sanitized sample (20 rows, no emails/phones/founders): [`examples/ahmedabad-startups/`](examples/ahmedabad-startups/). How to re-run it: [`examples/ahmedabad-startups/REPRODUCE.md`](examples/ahmedabad-startups/REPRODUCE.md).
+
+Live job folders under `data-workspace/` are local only (gitignored).
 
 ---
 
@@ -64,12 +66,44 @@ The agent confirms this interpretation before any download or scrape.
 
 ---
 
+## Configuration (optional)
+
+You can run jobs with no config. If you want defaults or secrets:
+
+| File | Purpose |
+|------|---------|
+| [`config/default.yaml`](config/default.yaml) | Timeouts, user-agent, workspace path, geocoder URL |
+| [`config/local.yaml`](config/README.md) | Machine-only overrides (gitignored) |
+| [`.env.example`](.env.example) | Copy to `.env` for tokens and env overrides |
+
+Details: [`config/README.md`](config/README.md). Never commit `.env` or API keys.
+
+---
+
+## How it is put together
+
+[`ARCHITECTURE.md`](ARCHITECTURE.md) is the single overview of the pipeline, job folders, and decision gates. Agent playbooks (`AGENT.md` and the rest) are the detailed procedures.
+
+---
+
+## Contributing
+
+- [`CONTRIBUTING.md`](CONTRIBUTING.md) — how to change docs, examples, and CI
+- [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md)
+- [`SECURITY.md`](SECURITY.md) — private vulnerability reports
+- [`CHANGELOG.md`](CHANGELOG.md)
+
+Issues and pull requests use the templates under `.github/`. CI runs `python scripts/validate_repo.py` on every push.
+
+---
+
 ## For the agent
 
 Start with `AGENT.md`. Confirm the request using `MANDATORY_REQUIREMENT.md` before acquiring anything.
 
 | File | When to open it |
 |------|-----------------|
+| `ARCHITECTURE.md` | Pipeline overview |
 | `AGENT.md` | Full workflow |
 | `DATA_REQUIREMENT.md` | Turn the ask into a data contract |
 | `GITHUB_TOOL_DISCOVERY.md` | Prefer existing tools over custom scrapers |

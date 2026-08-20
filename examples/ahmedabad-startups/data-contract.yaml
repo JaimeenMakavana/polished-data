@@ -1,0 +1,51 @@
+data_contract:
+  objective:
+    description: "Authentic dataset of Ahmedabad-based startups with geographic coordinates"
+
+  target:
+    entity_type: startup
+    geography: "Ahmedabad, Gujarat, India"
+    time_range: "2024-2026 preferred"
+
+  fields:
+    required:
+      - company_name
+      - website
+      - city
+      - sector
+      - latitude
+      - longitude
+      - verification_status
+    preferred:
+      - founding_year
+      - funding_stage
+      - description
+    optional:
+      - linkedin
+      - address
+
+  quantity:
+    target: 500
+    minimum: 500
+
+  quality:
+    authenticity: high
+    completeness: prefer_full_profiles
+    never_fabricate: true
+    provenance_required: true
+    deduplication: true
+
+  source_constraints:
+    allowed:
+      - public_web
+      - government_portals
+      - incubator_directories
+      - openstreetmap_geocoding
+    prohibited:
+      - paid_databases
+      - fabricated_data
+      - login_bypass
+
+  output:
+    formats: [json, csv]
+    destination: "data-workspace/jobs/<job-id>/output/"

@@ -1,0 +1,24 @@
+name: Data quality
+description: Example or documented output is incomplete, misleading, or unsanitized
+title: "[data] "
+labels: [data-quality]
+body:
+  - type: input
+    id: dataset
+    attributes:
+      label: Dataset or example path
+      placeholder: examples/ahmedabad-startups/
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is wrong
+      description: Missing fields, invented values, PII, broken provenance, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Row examples, quality-report snippets, source URLs.

@@ -361,7 +361,7 @@ Before creating anything:
 1. Inspect the project structure.
 2. Identify the existing application root.
 3. Identify existing source directories.
-4. Identify existing configuration files.
+4. Identify existing configuration files (`config/default.yaml`, `config/local.yaml`, `.env`).
 5. Identify package/dependency files.
 6. Determine where an isolated workspace can safely live.
 
